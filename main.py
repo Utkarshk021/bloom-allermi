@@ -26,10 +26,11 @@ symptoms = st.sidebar.selectbox("What are your typical allergy symptoms?",
                                 ["Runny nose", "Sneezing", "Congestion", "Itchy Eyes"])
 frequency = st.sidebar.selectbox("How often do you experience these symptoms?", 
                                  ["Daily", "Seasonally", "Occasionally"])
-severity = st.sidebar.selectbox("How severe are your symptoms?", 
-                                ["Mild", "Bothersome", "Can't function"])
-situations = st.sidebar.text_input("Do your symptoms worsen in specific situations? (Indoors, Outdoors, At certain times of year)")
-state = st.sidebar.text_input("What is your email?")
+severity = st.sidebar.selectbox("Are you atleast 18 years old?", 
+                                ["Yes", "No"])
+state = st.sidebar.selectbox("Which state do you currently live in?", 
+                                ["California", "New York", "Alaska", "North Carolina", "Washington", "Other"])
+situations = st.sidebar.text_input("Enter your email address. (optional)")
 
 if st.sidebar.button("Start Chat"):
     st.session_state.start_chat = True
