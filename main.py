@@ -21,8 +21,9 @@ openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 hide_st_style = """
             <style>
-            #GithubIcon {visibility: hidden;}
+            #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
+            header {visibility: hidden;}
             </style>
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
