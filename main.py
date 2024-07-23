@@ -2,15 +2,6 @@ import openai
 import streamlit as st
 import time
 
-hide_st_style = """
-            <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-            header {visibility: hidden;}
-            </style>
-            """
-st.markdown(hide_st_style, unsafe_allow_html=True)
-
 assistant_id = st.secrets["ASSISTANT_KEY"]
 
 client = openai
@@ -198,3 +189,12 @@ if st.session_state.start_chat:
 
 else:
     st.write("Please provide your allergy information in the sidebar and click 'Start Chat' to begin.")
+
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
