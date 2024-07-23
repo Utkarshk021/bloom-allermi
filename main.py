@@ -19,6 +19,15 @@ st.set_page_config(page_title="Bloom", page_icon=":speech_balloon:")
 
 openai.api_key = st.secrets["OPENAI_API_KEY"]
 
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
 # Sidebar for user input
 st.sidebar.title("Tell us about your allergies")
 
@@ -190,11 +199,4 @@ if st.session_state.start_chat:
 else:
     st.write("Please provide your allergy information in the sidebar and click 'Start Chat' to begin.")
 
-hide_st_style = """
-            <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-            header {visibility: hidden;}
-            </style>
-            """
-st.markdown(hide_st_style, unsafe_allow_html=True)
+
